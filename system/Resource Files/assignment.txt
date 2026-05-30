@@ -1,0 +1,4 @@
+A1,C1,Assignment 1: Linked Lists,100
+A2,C1,Assignment 2: Sorting,50
+A3,C4,Assignment 1: ERD,50
+A4,C3,Assignment 1: Networking Essay,30 
