@@ -1,0 +1,5 @@
+C1,Cs111,Data Structure,Doctor4
+C2,Cs123,Object Orianted Programming,Doctor1
+C3,Cs145,Fundemental Of Computer Science,Doctor3
+C4,Is133,Data Base,Doctor5
+C5,Ds222,Operation Research,Doctor2
