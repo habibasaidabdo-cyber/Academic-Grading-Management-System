@@ -1,22 +1,74 @@
-## Project Description
+# Academic Grading & Management System 🏫
 
-The **Academic Grading & Management System** is a lightweight, secure command-line application engineered in C++ to simulate a modern academic portal. Designed with standard university workflows in mind, the system completely replaces live databases with persistent data storage managed entirely through native C++ file streams (`std::fstream`). 
+A robust, multi-role university management portal engineered in C++. This application bypasses complex relational databases by utilizing native C++ File I/O serialization to persistently store and process live student-faculty logs.
 
-The application utilizes object-oriented programming principles to strictly enforce secure, role-based access control, offering customized functionalities for two primary user groups:
+---
 
-### Key Features
+## 📂 Repository Architecture
 
-*   **For Instructors (Faculty Portal):**
-    *   **Course & Content Creation:** Publish original assignments, manage course syllabi, and set evaluation parameters.
-    *   **Grade Book Management:** Review student assignment submissions, modify academic records dynamically, and calculate total grade averages securely.
-    
-*   **For Students (Student Portal):**
-    *   **Course Registration:** Browse active course catalogs and dynamically register for available classes.
-    *   **Assignment Hub:** View real-time assignment postings and directly upload/submit solutions to the system.
-    *   **Academic Transcripts:** Safely pull and view up-to-date personal grade reports, transcripts, and course performance analytics.
+Click on the sections below to explore the internal module structures of the application:
 
-### Technical Implementation
+<details>
+<summary><b>💻 Source Files (.cpp)</b></summary>
 
-*   **Persistence Layer:** Built entirely on text file parsing, rewriting, and structured data serialization using native C++ File I/O logic.
-*   **Data Structures:** Leverages efficient in-memory data management paradigms to read database states, execute lookups, and safely commit system updates back to disk.
-*   **Role-Based Security:** Features a robust authentication filter that separates UI menus and restricts file modification permissions based on the logged-in user type.
+* **`main.cpp`** & **`mainmenu.cpp`** — System entry point and master navigation workflow control.
+* **`doctor.cpp`** & **`doctorflowapp.cpp`** — Core mechanics for the Faculty Portal experience.
+* **`student.cpp`** & **`studentflowapp.cpp`** — Student account actions and validation logic.
+* **`course.cpp`** — Handles runtime course tracking matrices.
+* **`assignment.cpp`** & **`assignmentsolution.cpp`** — Task creation and submission processing models.
+* **`dataloader.cpp`** & **`downloadingdata.cpp`** — File-to-memory stream handlers.
+</details>
+
+<details>
+<summary><b>📋 Header Files (.h)</b></summary>
+
+* **`mainmenu.h`**
+* **`doctor.h`** & **`doctorflowapp.h`**
+* **`student.h`** & **`studentflowapp.h`**
+* **`course.h`**
+* **`assignment.h`** & **`assignmentsolution.h`**
+* **`dataloader.h`** & **`downloadingdata.h`**
+</details>
+
+<details>
+<summary><b>🗃️ Resource Files (.txt)</b></summary>
+
+* **`student.txt`** — Holds student profile data.
+* **`doctor.txt`** — Securely references faculty access records.
+* **`course.txt`** — Houses cataloged course parameters.
+* **`registerd.txt`** — Tracks student enrollment mappings.
+* **`assignment.txt`** — Stores instructor assignment specs.
+* **`assignmentsolution.txt`** — Logs secure submission locations.
+</details>
+
+---
+
+## 🚀 Key Features
+
+* **Faculty Command Center:** Instructors can publish custom tasks, track course rosters, and dynamically apply persistent grades.
+* **Student Roster Portal:** Students can browse available courses, register for open rosters, submit assignments, and review live transcripts.
+* **Persistent File I/O Layer:** Implements sequential text-parsing and tokenizing strategies using `<fstream>` channels to prevent volatile system data loss.
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+Make sure you have a modern C++ compiler installed (GCC/G++ or Clang) supporting **C++11 or higher**.
+
+### Compilation & Execution
+```bash
+# Clone the repository
+git clone [https://github.com/habibasaidabdo-cyber/Academic-Grading-Management-System.git](https://github.com/habibasaidabdo-cyber/Academic-Grading-Management-System.git)
+
+# Move into the project root directory
+cd Academic-Grading-Management-System
+
+# Move into the inner system folder where source files live
+cd system
+
+# Compile the source code using G++
+g++ -std=c++11 main.cpp mainmenu.cpp doctor.cpp doctorflowapp.cpp student.cpp studentflowapp.cpp course.cpp assignment.cpp assignmentsolution.cpp dataloader.cpp downloadingdata.cpp -o AcademicPortal
+
+# Launch the system interface
+./AcademicPortal
