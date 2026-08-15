@@ -51,6 +51,3 @@ Click on the sections below to explore the internal module structures of the app
 
 ---
 
-
-# Launch the system interface
-./AcademicPortal
