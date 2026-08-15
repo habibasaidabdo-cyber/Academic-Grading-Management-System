@@ -51,24 +51,6 @@ Click on the sections below to explore the internal module structures of the app
 
 ---
 
-## ⚡ Getting Started
-
-### Prerequisites
-Make sure you have a modern C++ compiler installed (GCC/G++ or Clang) supporting **C++11 or higher**.
-
-### Compilation & Execution
-```bash
-# Clone the repository
-git clone [https://github.com/habibasaidabdo-cyber/Academic-Grading-Management-System.git](https://github.com/habibasaidabdo-cyber/Academic-Grading-Management-System.git)
-
-# Move into the project root directory
-cd Academic-Grading-Management-System
-
-# Move into the inner system folder where source files live
-cd system
-
-# Compile the source code using G++
-g++ -std=c++11 main.cpp mainmenu.cpp doctor.cpp doctorflowapp.cpp student.cpp studentflowapp.cpp course.cpp assignment.cpp assignmentsolution.cpp dataloader.cpp downloadingdata.cpp -o AcademicPortal
 
 # Launch the system interface
 ./AcademicPortal
